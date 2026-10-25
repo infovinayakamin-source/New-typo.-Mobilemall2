@@ -1,0 +1,6 @@
+{
+  "name": "Mobile Mall - Wholesale B2B Distribution",
+  "description": "B2B mobile phone, tablet and iPad wholesale partner for retailers, resellers, and bulk buyers with live daily rates and master carton quotes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emeraldnoir: #05130E;
+  --color-emeralddeep: #071A13;
+  --color-emeraldcard: #0A2219;
+  --color-emeraldborder: #143527;
+  --color-emeraldglow: rgba(16, 185, 129, 0.12);
+
+  --color-gold: #D4AF37;
+  --color-champagne: #E5C07B;
+  --color-softgold: #F3E5AB;
+  --color-warmcream: #F6F3EC;
+  --color-ivorycard: #FFFFFF;
+
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #05130E;
+  color: #F7F7F5;
+  font-family: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Luxury Emerald & Champagne Gold Theme Utilities */
+.emerald-gradient-bg {
+  background: radial-gradient(circle at 50% 20%, #0D2D20 0%, #071A13 50%, #030C08 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F3E5AB 0%, #E5C07B 40%, #D4AF37 80%, #B89025 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #F3E5AB 0%, #E5C07B 50%, #D4AF37 100%);
+  color: #05130E;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.gold-gradient-btn:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F3E5AB 50%, #E5C07B 100%);
+  box-shadow: 0 0 25px rgba(229, 192, 123, 0.45);
+  transform: translateY(-1px);
+}
+
+.gold-outline-btn {
+  border: 1px solid rgba(229, 192, 123, 0.4);
+  color: #F3E5AB;
+  transition: all 0.25s ease;
+}
+
+.gold-outline-btn:hover {
+  border-color: #E5C07B;
+  background-color: rgba(229, 192, 123, 0.08);
+  color: #FFFFFF;
+}
+
+/* Emerald Luxury Cards */
+.emerald-card {
+  background: #0A2219;
+  border: 1px solid #143828;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.emerald-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+/* Giant Background Watermark Typography */
+.section-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(4rem, 15vw, 13rem);
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(229, 192, 123, 0.035);
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 0;
+}
+
+.section-watermark-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(4rem, 15vw, 13rem);
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(184, 144, 37, 0.05);
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Blueprint / Map texture for contrast section */
+.map-blueprint-bg {
+  background-color: #F6F3EC;
+  background-image: 
+    linear-gradient(rgba(184, 144, 37, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 144, 37, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* --- GUARANTEED FLOATING MOTION ANIMATIONS --- */
+@keyframes floatCenterPhone {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-28px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floatLeftPhone {
+  0% {
+    transform: translateY(0px) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-34px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(-8deg);
+  }
+}
+
+@keyframes floatRightPhone {
+  0% {
+    transform: translateY(0px) rotate(8deg);
+  }
+  50% {
+    transform: translateY(-26px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(8deg);
+  }
+}
+
+@keyframes floorGlowPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(0.72);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+}
+
+@keyframes pillBob {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pillBobDelayed {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes screenGleam {
+  0% {
+    transform: translateX(-150%) rotate(45deg);
+  }
+  30%, 100% {
+    transform: translateX(250%) rotate(45deg);
+  }
+}
+
+.float-center-active {
+  animation: floatCenterPhone 3.8s ease-in-out infinite !important;
+  will-change: transform;
+}
+
+.float-left-active {
+  animation: floatLeftPhone 4.4s ease-in-out infinite !important;
+  will-change: transform;
+}
+
+.float-right-active {
+  animation: floatRightPhone 4.0s ease-in-out infinite !important;
+  will-change: transform;
+}
+
+.floor-glow-active {
+  animation: floorGlowPulse 3.8s ease-in-out infinite !important;
+}
+
+.pill-bob-active {
+  animation: pillBob 3.2s ease-in-out infinite !important;
+}
+
+.pill-bob-delayed-active {
+  animation: pillBobDelayed 3.6s ease-in-out infinite !important;
+}
+
+.screen-gleam-active {
+  animation: screenGleam 4s ease-in-out infinite !important;
+}
+
+/* Metric Cards Animation & Micro-Interactions */
+@keyframes metricGleam {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  30%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.metric-gleam-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-gleam-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(229, 192, 123, 0.18), transparent);
+  animation: metricGleam 4.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes metricBorderGlow {
+  0%, 100% {
+    border-color: rgba(229, 192, 123, 0.3);
+    box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.08);
+  }
+  50% {
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 0 8px 25px -2px rgba(212, 175, 55, 0.2);
+  }
+}
+
+.metric-glow-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metric-glow-card:hover {
+  transform: translateY(-6px);
+  border-color: #D4AF37 !important;
+  box-shadow: 0 16px 32px -4px rgba(212, 175, 55, 0.18), 0 8px 16px -4px rgba(5, 19, 14, 0.08);
+}
+
+@keyframes livePulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.65;
+  }
+}
+
+.live-pulse-indicator {
+  animation: livePulseDot 2s ease-in-out infinite;
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05130E;
+}
+::-webkit-scrollbar-thumb {
+  background: #143527;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
