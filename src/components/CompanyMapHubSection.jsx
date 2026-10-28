@@ -298,6 +298,20 @@ export default function CompanyMapHubSection() {
 
                   <div className="space-y-3 mt-4 text-xs">
                     <div className="p-3 rounded-2xl bg-[#061A12] border border-[#143527] space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] text-[#E5C07B] font-extrabold uppercase tracking-wider block">
+                          Legal Entity & Contact Person:
+                        </span>
+                        <span className="text-[10px] bg-[#E5C07B]/15 text-[#F3E5AB] px-2 py-0.5 rounded font-bold border border-[#E5C07B]/30">
+                          {config.legalBusinessName || 'Mobile Mall2'}
+                        </span>
+                      </div>
+                      <p className="text-white font-bold text-xs">
+                        Authorized Person: <span className="text-[#F3E5AB]">{config.contactPerson || 'Vicky Gupta'}</span>
+                      </p>
+                    </div>
+
+                    <div className="p-3 rounded-2xl bg-[#061A12] border border-[#143527] space-y-1">
                       <span className="text-[10px] text-[#E5C07B] font-extrabold uppercase tracking-wider block">
                         Registered Dispatch Facility:
                       </span>
@@ -352,6 +366,22 @@ export default function CompanyMapHubSection() {
                       >
                         <Mail className="w-3 h-3" />
                         <span>Email</span>
+                      </a>
+                    </div>
+
+                    <div className="p-3 rounded-2xl bg-[#061A12] border border-[#143527] flex items-center justify-between">
+                      <div>
+                        <span className="text-[10px] text-[#789284] block">Official Website:</span>
+                        <a href={config.website || 'https://mobilemall2.com/'} target="_blank" rel="noopener noreferrer" className="text-xs font-black text-white hover:text-[#E5C07B] transition-colors">{config.website || 'https://mobilemall2.com/'}</a>
+                      </div>
+                      <a
+                        href={config.website || 'https://mobilemall2.com/'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1.5 rounded-lg bg-[#0A2219] border border-[#E5C07B]/40 text-[#E5C07B] hover:bg-[#E5C07B] hover:text-black font-bold text-xs transition-colors flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        <span>Visit</span>
                       </a>
                     </div>
                   </div>

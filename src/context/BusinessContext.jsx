@@ -25,7 +25,20 @@ export function BusinessProvider({ children }) {
           parsed.googleBusinessProfileUrl = initialBusinessConfig.googleBusinessProfileUrl;
           parsed.gmbMapUrl = initialBusinessConfig.gmbMapUrl;
         }
-        return { ...initialBusinessConfig, ...parsed, officialEmail: initialBusinessConfig.officialEmail, warehouseAddress: initialBusinessConfig.warehouseAddress, whatsappNumber: initialBusinessConfig.whatsappNumber, wholesaleDeskPhone: initialBusinessConfig.wholesaleDeskPhone };
+        return {
+          ...initialBusinessConfig,
+          ...parsed,
+          officialEmail: initialBusinessConfig.officialEmail,
+          contactPerson: initialBusinessConfig.contactPerson,
+          legalBusinessName: initialBusinessConfig.legalBusinessName,
+          legalName: initialBusinessConfig.legalName,
+          warehouseAddress: initialBusinessConfig.warehouseAddress,
+          cityStateCountry: initialBusinessConfig.cityStateCountry,
+          whatsappNumber: initialBusinessConfig.whatsappNumber,
+          wholesaleDeskPhone: initialBusinessConfig.wholesaleDeskPhone,
+          phone: initialBusinessConfig.phone,
+          website: initialBusinessConfig.website,
+        };
       } catch (e) {
         console.error('Error parsing stored config', e);
       }

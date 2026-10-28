@@ -1,28 +1,37 @@
 /**
- * MOBILE MALL - Official Business Configuration & Placeholders
+ * MOBILE MALL - Official Business Configuration & Verified Credentials
  * 
- * Configurable business data store.
- * Unverified contact numbers, addresses, and GST details are clearly marked
- * with customizable placeholders so store owners can update them seamlessly.
+ * Configured with authentic business details:
+ * Contact Person: Vicky Gupta
+ * Email: mobilemall.vg@gmail.com
+ * Phone / WhatsApp: +91 98255 55005
+ * Legal Business Name: Mobile Mall2
+ * Address: L 1,2,3, MURTIMANT COMPLEX, OPP. RUPAM CINEMA, RELIEF ROAD, AHMEDABAD, GUJARAT 380001, India
+ * Website: https://mobilemall2.com/
  */
 
 export const initialBusinessConfig = {
   brandName: "MOBILE MALL",
+  legalBusinessName: "Mobile Mall2",
+  legalName: "Mobile Mall2",
+  contactPerson: "Vicky Gupta",
   tagline: "Your Trusted Mobile Wholesale Partner",
   category: "Wholesale Mobile Phones, Tablets & iPads",
   logoUrl: "/mobile-mall-logo.jpg",
   facebookPage: "https://www.facebook.com/profile.php?id=61595620925731",
+  website: "https://mobilemall2.com/",
   
   // Official Wholesale Contacts
   phone: "+91 98255 55005",
   whatsappNumber: "+91 98255 55005",
   wholesaleDeskPhone: "+91 98255 55005",
-  officialEmail: "mobilemall3005@gmail.com",
+  officialEmail: "mobilemall.vg@gmail.com",
   
   // Physical Hub / Dispatch Warehouse
-  warehouseAddress: "L1,L2,L3, MURTIMANT COMPLEX, ON ROAD, Relief Rd, opp. RUPAM CINEMA",
-  cityStateCountry: "Ahmedabad, Gujarat 380001",
+  warehouseAddress: "L 1,2,3, MURTIMANT COMPLEX, OPP. RUPAM CINEMA, RELIEF ROAD",
+  cityStateCountry: "AHMEDABAD, GUJARAT 380001, India",
   pincode: "380001",
+  country: "India",
   googleBusinessProfileUrl: "https://share.google/bpMAmDlqvDH4GRPAK",
   gmbMapUrl: "https://share.google/bpMAmDlqvDH4GRPAK",
   

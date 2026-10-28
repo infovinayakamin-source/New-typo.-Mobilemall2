@@ -6,30 +6,65 @@
   --color-emeraldcard: #0A2219;
   --color-emeraldborder: #143527;
   --color-emeraldglow: rgba(16, 185, 129, 0.12);
-
   --color-gold: #D4AF37;
   --color-champagne: #E5C07B;
   --color-softgold: #F3E5AB;
   --color-warmcream: #F6F3EC;
   --color-ivorycard: #FFFFFF;
 
-  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Headlines: Anek font family */
+  --font-heading: 'Anek Latin', 'Anek Devanagari', 'Anek Gujarati', sans-serif;
+  --font-anek: 'Anek Latin', 'Anek Devanagari', 'Anek Gujarati', sans-serif;
+
+  /* All others: Times New Roman */
+  --font-sans: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  --font-serif: 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
 :root {
   color-scheme: dark;
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
+/* Base Body: All general content in Times New Roman */
 body {
   background-color: #05130E;
   color: #F7F7F5;
-  font-family: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+/* Form controls & standard tags default to Times New Roman */
+button,
+input,
+select,
+textarea,
+p,
+span,
+label,
+a,
+li,
+td,
+th {
+  font-family: inherit;
+}
+
+/* ONLY Headlines are with Anek Bold */
+h1, h2, h3, h4, h5, h6,
+.font-heading,
+.font-anek,
+.headline,
+.headline-title,
+.section-headline {
+  font-family: 'Anek Latin', 'Anek Devanagari', 'Anek Gujarati', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure inline elements inside headlines preserve the Anek Bold font family */
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+.font-heading *,
+.headline * {
+  font-family: inherit !important;
 }
 
 /* Luxury Emerald & Champagne Gold Theme Utilities */
@@ -80,15 +115,15 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.1);
 }
 
-/* Giant Background Watermark Typography */
+/* Giant Background Watermark Typography (Headlines) */
 .section-watermark {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Anek Latin', 'Anek Devanagari', 'Anek Gujarati', sans-serif !important;
   font-size: clamp(4rem, 15vw, 13rem);
-  font-weight: 900;
+  font-weight: 800 !important;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(229, 192, 123, 0.035);
@@ -103,9 +138,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Anek Latin', 'Anek Devanagari', 'Anek Gujarati', sans-serif !important;
   font-size: clamp(4rem, 15vw, 13rem);
-  font-weight: 900;
+  font-weight: 800 !important;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(184, 144, 37, 0.05);
@@ -303,19 +338,21 @@ h1, h2, h3, h4, h5, h6 {
   animation: livePulseDot 2s ease-in-out infinite;
 }
 
-
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #05130E;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #143527;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #D4AF37;
 }

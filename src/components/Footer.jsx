@@ -230,6 +230,11 @@ export default function Footer() {
                 <a href={`mailto:${config.officialEmail}`} className="text-white hover:text-[#E5C07B] transition-colors">{config.officialEmail}</a>
               </div>
 
+              <div className="flex items-center gap-2">
+                <ExternalLink className="w-4 h-4 text-[#E5C07B] flex-shrink-0" />
+                <a href={config.website || 'https://mobilemall2.com/'} target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#E5C07B] transition-colors">{config.website ? config.website.replace('https://', '').replace('/', '') : 'mobilemall2.com'}</a>
+              </div>
+
               <div className="flex items-start gap-2 pt-1 border-t border-[#143527]">
                 <Clock className="w-4 h-4 text-[#789284] flex-shrink-0 mt-0.5" />
                 <div className="text-[11px] text-[#789284]">

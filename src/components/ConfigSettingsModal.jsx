@@ -111,6 +111,38 @@ export default function ConfigSettingsModal() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-bold text-[#9B9B9B] uppercase mb-1">
+                Authorized Contact Person:
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={formData.contactPerson || ''}
+                  onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
+                  placeholder="e.g. Vicky Gupta"
+                  className="w-full bg-[#080808] border border-[#2A2A2A] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-[#9B9B9B] uppercase mb-1">
+                Legal Business Name:
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={formData.legalBusinessName || ''}
+                  onChange={(e) => setFormData({ ...formData, legalBusinessName: e.target.value })}
+                  placeholder="e.g. Mobile Mall2"
+                  className="w-full bg-[#080808] border border-[#2A2A2A] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label className="block text-xs font-bold text-[#9B9B9B] uppercase mb-1">
                 Official Invoicing Email:
               </label>
               <div className="relative">
@@ -126,16 +158,16 @@ export default function ConfigSettingsModal() {
 
             <div>
               <label className="block text-xs font-bold text-[#9B9B9B] uppercase mb-1">
-                GST / Tax Registration ID:
+                Website URL:
               </label>
               <div className="relative">
                 <input
-                  type="text"
-                  value={formData.gstNumber}
-                  onChange={(e) => setFormData({ ...formData, gstNumber: e.target.value })}
-                  className="w-full bg-[#080808] border border-[#2A2A2A] rounded-xl pl-9 pr-3 py-2 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
+                  type="url"
+                  value={formData.website || ''}
+                  onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  placeholder="https://mobilemall2.com/"
+                  className="w-full bg-[#080808] border border-[#2A2A2A] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#D4AF37]"
                 />
-                <FileText className="w-4 h-4 text-[#777777] absolute left-3 top-1/2 -translate-y-1/2" />
               </div>
             </div>
           </div>
