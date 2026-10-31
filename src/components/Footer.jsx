@@ -250,13 +250,7 @@ export default function Footer() {
         {/* Bottom Bar: Exact User Requested Attribution */}
         <div className="pt-8 flex flex-col items-center justify-center text-center gap-1.5 text-xs text-[#8FA59A]">
           <div className="text-white font-bold text-sm sm:text-base tracking-wide">
-            Created by Mobile Mall
-          </div>
-          <div className="text-[#C4D6CD] font-medium text-xs">
-            All rights reserved by Mobile Mall 2
-          </div>
-          <div className="text-[#E5C07B] text-xs font-semibold mt-0.5">
-            Copyright and Design by Mobile Mall 2
+            © 2026 MOBILE MALL II. All Rights Reserved.
           </div>
         </div>
 
