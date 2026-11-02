@@ -11,6 +11,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import GoogleMapsIcon from './GoogleMapsIcon';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function ContactSection() {
   const { config, generateWhatsAppUrl } = useBusiness();
@@ -113,7 +114,7 @@ export default function ContactSection() {
           >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-[#25D366]/15 flex items-center justify-center text-[#25D366]">
-                <MessageCircle className="w-5 h-5 fill-current" />
+                <WhatsAppIcon className="w-6 h-6 fill-current" />
               </div>
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-[#A3B8AD] font-bold block">

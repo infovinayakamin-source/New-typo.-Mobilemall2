@@ -1,6 +1,7 @@
 import React from 'react';
 import { useBusiness } from '../context/BusinessContext';
-import { MessageCircle, FileSpreadsheet, Bell, Sparkles, CheckCircle2 } from 'lucide-react';
+import { FileSpreadsheet, Bell, Sparkles, CheckCircle2 } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function DailyRateBroadcastBanner() {
   const { generateWhatsAppUrl, setIsStockSheetModalOpen } = useBusiness();
@@ -36,7 +37,7 @@ export default function DailyRateBroadcastBanner() {
             onClick={handleSubscribe}
             className="w-full sm:w-auto px-6 py-3.5 bg-[#25D366] text-black font-extrabold rounded-xl text-xs sm:text-sm hover:bg-[#20ba59] transition-all flex items-center justify-center gap-2 shadow-lg"
           >
-            <MessageCircle className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4 fill-current text-black" />
             <span>Subscribe on WhatsApp (Free)</span>
           </button>
 

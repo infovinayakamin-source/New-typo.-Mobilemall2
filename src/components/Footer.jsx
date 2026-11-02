@@ -11,6 +11,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import GoogleMapsIcon from './GoogleMapsIcon';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Footer() {
   const {
@@ -224,7 +225,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="flex items-center gap-2 group hover:text-[#25D366] transition-colors"
               >
-                <MessageCircle className="w-4 h-4 text-[#25D366] flex-shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] flex-shrink-0" />
                 <div>
                   <span className="text-white group-hover:text-[#25D366] font-medium transition-colors">{config.whatsappNumber}</span>
                   <span className="text-[10px] text-[#25D366] ml-1.5 font-semibold">(WhatsApp)</span>

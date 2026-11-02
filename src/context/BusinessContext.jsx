@@ -145,7 +145,8 @@ export function BusinessProvider({ children }) {
       cleanNumber = '91' + cleanNumber;
     }
     const encoded = encodeURIComponent(messageText || 'Hello Mobile Mall Wholesale Desk.');
-    return `https://wa.me/${cleanNumber}?text=${encoded}`;
+    // Original official WhatsApp API endpoint (Click-to-Chat API)
+    return `https://api.whatsapp.com/send?phone=${cleanNumber}&text=${encoded}`;
   };
 
   return (
