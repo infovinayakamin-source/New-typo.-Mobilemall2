@@ -1,4 +1,4 @@
-import { Component, ErrorInfo, ReactNode, useState } from 'react';
+import { Component, ErrorInfo, ReactNode, useState, useEffect } from 'react';
 import { BusinessProvider } from './context/BusinessContext';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -23,13 +23,26 @@ import RetailerRegistrationModal from './components/RetailerRegistrationModal';
 import ConfigSettingsModal from './components/ConfigSettingsModal';
 import RFQBasketDrawer from './components/RFQBasketDrawer';
 import ExchangeModal from './components/ExchangeModal';
+import LogoIntroSplashScreen from './components/LogoIntroSplashScreen';
 
 function MainLayout() {
   const [selectedBrand, setSelectedBrand] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const handleReplay = () => setShowSplash(true);
+    window.addEventListener('replay-logo-intro', handleReplay);
+    return () => window.removeEventListener('replay-logo-intro', handleReplay);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#05130E] text-[#F7F7F5] flex flex-col font-sans selection:bg-[#E5C07B] selection:text-[#05130E]">
+      {/* Starting Animated Logo Intro Splash Screen */}
+      {showSplash && (
+        <LogoIntroSplashScreen onFinish={() => setShowSplash(false)} />
+      )}
+
       {/* Navigation Header */}
       <Navbar
         searchTerm={searchTerm}

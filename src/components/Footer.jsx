@@ -35,17 +35,23 @@ export default function Footer() {
           
           {/* Brand Info & Mission (Col 1-4) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
+            <div
+              className="flex items-center gap-3 cursor-pointer group"
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('replay-logo-intro'));
+              }}
+              title="Click to replay Mobile Mall Logo Intro"
+            >
               <img
                 src={config.logoUrl}
                 alt="Mobile Mall Wholesale"
-                className="w-14 h-14 rounded-full object-cover border-2 border-[#E5C07B]/70 shadow-lg shadow-[#E5C07B]/15"
+                className="w-14 h-14 rounded-full object-cover border-2 border-[#E5C07B]/70 shadow-lg shadow-[#E5C07B]/15 transition-transform duration-300 group-hover:scale-105"
                 onError={(e) => {
                   e.target.src = '/mobile-mall-logo.jpg';
                 }}
               />
               <div>
-                <span className="text-xl font-extrabold text-white tracking-tight block font-heading">
+                <span className="text-xl font-extrabold text-white tracking-tight block font-heading group-hover:text-[#F3E5AB] transition-colors">
                   MOBILE MALL
                 </span>
                 <span className="text-xs text-[#E5C07B] font-semibold tracking-wider uppercase block">

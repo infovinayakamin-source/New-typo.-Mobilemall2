@@ -57,7 +57,28 @@ export default function HeroSection() {
         </div>
 
         {/* Top Centered Brand Wordmark & Main Headlines */}
-        <div className="text-center space-y-2 mb-4">
+        <div className="text-center space-y-2 mb-4 flex flex-col items-center">
+          {/* Official Animated Brand Emblem */}
+          <div
+            onClick={() => window.dispatchEvent(new CustomEvent('replay-logo-intro'))}
+            title="Click to replay logo intro animation"
+            className="group cursor-pointer mb-2 relative"
+          >
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full p-0.5 bg-gradient-to-tr from-[#99731E] via-[#F3E5AB] to-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.4)] group-hover:scale-105 group-hover:shadow-[0_0_40px_rgba(212,175,55,0.7)] transition-all duration-300">
+              <img
+                src={config.logoUrl}
+                alt="Mobile Mall Official Logo"
+                className="w-full h-full object-cover rounded-full"
+                onError={(e) => {
+                  e.currentTarget.src = '/mobile-mall-logo.jpg';
+                }}
+              />
+            </div>
+            <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-[#05130E] text-[#E5C07B] border border-[#E5C07B]/50 text-[9px] font-bold px-2 py-0.2 rounded-full whitespace-nowrap shadow opacity-90 group-hover:opacity-100 group-hover:border-[#E5C07B]">
+              B2B HUB
+            </span>
+          </div>
+
           <div className="text-xs sm:text-sm uppercase tracking-widest text-[#A3B8AD] font-bold">
             MOBILE <span className="gold-gradient-text font-black">MALL</span> • WHOLESALE DISTRIBUTION
           </div>

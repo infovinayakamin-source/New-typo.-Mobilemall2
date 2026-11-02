@@ -17,7 +17,7 @@ export const initialBusinessConfig = {
   contactPerson: "Vicky Gupta",
   tagline: "Your Trusted Mobile Wholesale Partner",
   category: "Wholesale Mobile Phones, Tablets & iPads",
-  logoUrl: "/mobile-mall-logo.jpg",
+  logoUrl: "/assets/aistudio/857933617_122098904577520697_1007430803464821606_n_803cc052.jpg",
   facebookPage: "https://www.facebook.com/profile.php?id=61595620925731",
   website: "https://mobilemall2.com/",
   

@@ -94,12 +94,18 @@ export default function Navbar({ onSearchChange, searchTerm }) {
         <div className="flex items-center justify-between h-20 gap-4">
           
           {/* Brand Logo & Wordmark */}
-          <a href="#hero" className="flex items-center gap-3.5 flex-shrink-0 group">
+          <div
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('replay-logo-intro'));
+            }}
+            title="Mobile Mall Wholesale - Click to view intro animation"
+            className="flex items-center gap-3.5 flex-shrink-0 group cursor-pointer"
+          >
             <div className="relative">
               <img
                 src={config.logoUrl}
                 alt="Mobile Mall Wholesale"
-                className="w-12 h-12 rounded-full object-cover border-2 border-[#E5C07B]/80 group-hover:border-[#F3E5AB] shadow-lg shadow-[#E5C07B]/15 transition-all duration-300"
+                className="w-12 h-12 rounded-full object-cover border-2 border-[#E5C07B]/80 group-hover:border-[#F3E5AB] shadow-lg shadow-[#E5C07B]/15 group-hover:scale-105 transition-all duration-300"
                 onError={(e) => {
                   e.target.src = '/mobile-mall-logo.jpg';
                 }}
@@ -118,7 +124,7 @@ export default function Navbar({ onSearchChange, searchTerm }) {
                 Wholesale Mobiles • Tablets • iPads
               </p>
             </div>
-          </a>
+          </div>
 
           {/* Premium Desktop Navigation Bar — Exactly 7 Menus */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
